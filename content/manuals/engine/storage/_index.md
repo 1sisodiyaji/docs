@@ -30,7 +30,7 @@ of the writable layer of the container:
 
 No matter which type of mount you choose to use, the data looks the same from
 within the container. It is exposed as either a directory or an individual file
-in the container's filesystem.
+in the container's file system.
 
 ### Volume mounts
 
@@ -43,7 +43,7 @@ result in the volume or its data breaking in unexpected ways.
 
 Volumes are ideal for performance-critical data processing and long-term
 storage needs. Since the storage location is managed on the daemon host,
-volumes provide the same raw file performance as accessing the host filesystem
+volumes provide the same raw file performance as accessing the host file system
 directly.
 
 ### Bind mounts
@@ -62,7 +62,7 @@ A tmpfs mount stores files directly in the host machine's memory, ensuring the
 data is not written to disk. This storage is ephemeral: the data is lost when
 the container is stopped or restarted, or when the host is rebooted. tmpfs
 mounts do not persist data either on the Docker host or within the container's
-filesystem.
+file system.
 
 These mounts are suitable for scenarios requiring temporary, in-memory storage,
 such as caching intermediate data, handling sensitive information like
